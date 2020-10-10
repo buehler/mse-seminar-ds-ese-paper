@@ -1,0 +1,14 @@
+latexdiff-base
+
+*.bbl
+*.blg
+*.aux
+*.fls
+*.log
+*.pdf
+*.fdb*
+*.out
+*.synctex*
+*.dvi
+*.xcp
+__latexindent*

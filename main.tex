@@ -1,0 +1,54 @@
+% Template for articles
+% Based on the ACM SIGPLAN proceedings style
+% (c) Farhad Mehta 2020
+
+
+%%%%%%%%%%-----TEMPLATE
+\documentclass[sigplan, nonacm=true, screen=true, timestamp=true, review=false]{acmart}
+
+% Note: Earlier versions acmart before TeXLive 2020 may not support the option `nonacm`
+% There is a workaround below for this case.
+
+% The following 4 lines are a workaround in case you are working with a version of acmart that does not support the `noasm` option. 
+% \settopmatter{printacmref=false}
+% \setcopyright{none}
+% \renewcommand\footnotetextcopyrightpermission[1]{}
+% \pagestyle{plain}
+
+%%%%%%%%%%-----CONFIGURATION
+\input{configuration}
+
+%%%%%%%%%%-----TITLEPAGE
+\title{Microservices in a DevOps context}
+\subtitle{A review of ``A Systematic Mapping Study on Microservices Architecture in DevOps''}
+
+\author{Christoph Bühler}
+\affiliation{OST Eastern Switzerland University of Applied Sciences}
+\affiliation{MSE Seminar ``Design Science and Empirical Software Engineering''}
+\affiliation{Supervisor: Olaf Zimmermann}
+\affiliation{Semester: Autumn/Spring 2020}
+
+\keywords{}
+
+%%%%%%%%%%-----DOCUMENT
+\begin{document}
+
+\input{sections/0_abstract.tex}
+
+\maketitle
+
+%%%%%%%%%%-----BEGIN_CONTENT
+
+\input{sections/1_introduction.tex}
+\input{sections/outline.tex}
+
+%%%%%%%%%%-----BIBLIOGRAPHY
+
+%% \nocite{latexDerivationTree}
+
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+%%%%%%%%%%-----END_DOCUMENT
+
+\end{document}
