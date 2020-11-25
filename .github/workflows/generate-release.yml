@@ -17,6 +17,12 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+      - name: Error Report
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: main-error
+          path: ./
       - uses: actions/upload-artifact@v2
         with:
           name: paper
@@ -49,6 +55,12 @@ jobs:
         with:
           root_file: diff.tex
           working_directory: latexdiff-base
+      - name: Error Report
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: diff-error
+          path: latexdiff-base/
       - uses: actions/upload-artifact@v2
         with:
           name: diff
