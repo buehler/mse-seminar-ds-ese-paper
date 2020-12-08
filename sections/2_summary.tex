@@ -1,39 +1,38 @@
 \section{The reviewed mapping study}
+\label{sec:summary}
 
 The general topic of the reviewed paper is to conduct an SMS over the topic
-of ``Microservices in DevOps''. It should be considered that the context
+of ``Microservices in DevOps''. We should take into consideration, that the context
 is specifically set to ``DevOps''. Recent years and recent developments
-have risen the attention to the topic significantly. Furthermore, at the
+raised the attention to the topic significantly. Furthermore, at the
 time of writing of the paper, no comprehensive review of the research was
-available. Several research questions (RQs) were
-asked and afterwards a systematic mapping study (SMS) was conducted upon two
-defined search queries. The results were screened and analyzed. Afterwards, the
-results were mapped to certain categories and several problems and their solutions
-were mapped. After a presentation of the results, a wide discussion of the found
-results shows some differences between the theory and effective results \cite{waseem:SMSMSADevOps}.
-
+available. The study asks several research questions (RQs) and conducts
+a systematic mapping study (SMS) upon two defined search queries. Then,
+after screening and analyzing the results, the authors created a mapping
+to certain categories and several problems and their solutions.
+After a presentation of the results, a wide discussion of the found
+results shows some differences between the theory and effective
+results \cite{waseem:SMSMSADevOps}.
 
 \subsection{Motivation}
 
 The purpose of the reviewed paper is to create an SMS to understand how 
-Microservice Architecture (MSA) is used in conjunction with DevOps \cite{waseem:SMSMSADevOps}.
+Microservice Architecture (MSA) is used in conjunction with DevOps.
 Furthermore the objective is to identify, analyze and categorize the
-existing literature and research around the given topic \cite{waseem:SMSMSADevOps}.
+existing literature and research around the given topic.
 In addition to that, problems and their corresponding solutions - if any - should
-be identified \cite{waseem:SMSMSADevOps}. The contribution of the paper to the
+be identified. The contribution of the paper to the
 academia is a classification of the research, a classification of problems
 and their solution, a list of identified research challenges, a classification of
-used tools and a list of formal or informal description tools for MSA \cite{waseem:SMSMSADevOps}.
-
+used tools and a list of formal or informal description
+tools for MSA \cite{waseem:SMSMSADevOps}.
 
 \subsection{Methodology}
 
-With the goal of not limiting the results of such 
-an empirical software engineering method to one specific research question,
-an SMS is conducted instead of an SLR which provides insight and secondary
-data for a particular question \cite{waseem:SMSMSADevOps}. The conducted
-SMS was built upon the guidelines that were purposed by Kai Petersen \cite{petersen:SMS}.
-The SMS is executed in three steps \cite{waseem:SMSMSADevOps}:
+With the goal to not limit the results of such an empirical software engineering method
+to one specific research question, the authors conducted an SMS instead of an SLR,
+which provides insight and secondary data for a particular question.
+The SMS contained three essential steps \cite{waseem:SMSMSADevOps}:
 
 \begin{enumerate}
     \item Planning the mapping study
@@ -41,6 +40,7 @@ The SMS is executed in three steps \cite{waseem:SMSMSADevOps}:
     \item Mapping and documenting the results
 \end{enumerate}
 
+The authors built the conducted SMS upon the guidelines purposed by Kai Petersen \cite{petersen:SMS}.
 
 \subsection{Research Questions}
 
@@ -123,32 +123,34 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
     \label{tbl:RQs}
 \end{table}
 
+The table above (\autoref{tbl:RQs}) shows the research questions that the authors
+tried to solve with the systematic mapping study.
 
 \subsection{Search}
 
-To collect data, a two-phase-search is used. The first search is applied
+To collect data, Waseem et al. used a two-phase-search. The first search was applied
 to the selected databases with the created search-query. The secondary
-search uses a technique called ``snowballing'' \cite{wohlin:Snowballing}. ``Forward snowballing''
+search used a technique called ``snowballing''. ``Forward snowballing''
 includes studies that cite the found studies, while ``backward snowballing''
 follows the references of the found research material \cite{wohlin:Snowballing}.
 
-The search is limited to peer-reviewed studies from January 2009 until
-July 2018. The starting point was chosen because the term ``DevOps''
+The study limited the search to peer-reviewed studies from January 2009 until
+July 2018. They chose this particular starting point because the term ``DevOps''
 was introduced in the year 2009 \cite{waseem:SMSMSADevOps}.
 
 Since MSA has multiple synonyms and can be in context with DevOps or without
 the said context, the following two search-strings were compiled \cite{waseem:SMSMSADevOps}:
 
-~\\
-\texttt{
-((microservi* OR micro-servi*) \\
-AND (architect* OR design OR structur*) AND DevOps)
-}
+\begin{enumerate}
+    \item \texttt{((microservi* OR micro-servi*)
+    AND (architect* OR design OR structur*) AND DevOps)}
+    \item \texttt{(microservice AND DevOps)}
+\end{enumerate}
 
-~\\
-\texttt{(microservice AND DevOps)}
+It is worth noting that the contextual part ``DevOps'' is not optional nor is
+it a construct like ``microservi*''. This limits the results to publications 
+that must contain the term ``DevOps'' in their title.
 
-~\\
 The search was executed on the following seven databases \cite{waseem:SMSMSADevOps}:
 
 \begin{itemize}
@@ -162,29 +164,28 @@ The search was executed on the following seven databases \cite{waseem:SMSMSADevO
 \end{itemize}
 
 The execution of the provided search queries on the given databases
-yielded a total of 494 studies. After the initial search, the found
-studies were screened and categorized into relevant and irrelevant studies.
-Of the original 494 studies, only 285 were flagged as ``relevant''.
-Those were analyzed according to six generic screening and one specific
-screening aspect. After the screening 117 remained flagged as relevant.
-Those 117 studies were fully read and scored according to inclusion and
-exclusion criteria. At the point when all 117 studies were read and
-assessed, 45 studies remained in the relevant category.
+yielded a total of 494 studies. After the initial search, the authors
+screened and categorized the found studies into relevant and irrelevant
+publications. Of the original 494 studies, only 285 were flagged as ``relevant''.
+\smsAuthors then analyzed the studies according to six generic screening and one specific
+screening aspect. After the screening, 117 remained flagged as relevant.
+Those 117 studies were fully read and scored by the authors according to inclusion and
+exclusion criteria. At the point when the authors read and assessed all 117 studies,
+only 45 studies remained in the relevant category.
 
 In addition to the conducted search, the snowballing technique
-yielded additional two studies that should be included in the study.
-The results of the snowball were compared with the found results of the
-initial search and then the same practices were applied as were on the
-initial search.
+yielded additional two studies that were included in the study.
+The authors compared the results of the snowball with the found results of the
+initial search and then the same practices were applied to those
+publications found with the snowball search.
 
-After the search, a total result of 47 different studies were regarded
-as relevant for the SMS \cite{waseem:SMSMSADevOps}.
-
+After the search, a total count of 47 different studies remained
+relevant for the SMS \cite{waseem:SMSMSADevOps}.
 
 \subsection{Results}
 
 After the conducted search and the thorough analytical readings and classification
-of the 47 studies, the collected results are separated in multiple sections
+of the 47 studies, the collected results were separated in multiple sections
 to answer the RQs given in \autoref{tbl:RQs}:
 
 \begin{itemize}
@@ -194,18 +195,20 @@ to answer the RQs given in \autoref{tbl:RQs}:
     \item Tools and application domain
 \end{itemize}
 
+The following sections will summarize the found results to
+the specific research questions.
 
 \subsubsection{Demography and Classification}
 
-This subsection should tackle RQ1.1 and RQ1.2 of \autoref{tbl:RQs}.
+This subsection shall tackle RQ1.1 and RQ1.2 of \autoref{tbl:RQs}.
 
 The conducted search had a year span from 2009 to 2018 \cite{waseem:SMSMSADevOps}.
 Despite the broad search parameters of nearly considering a decade worth
 of publications, all of the relevant publications were published between
-2015 and 2018. The following graph should give some insight into the yearly
-publication rate and the type of publication:
+2015 and 2018. The following graph (\autoref{fig:publicationActivity})
+should give some insight into the yearly publication rate and the type of publication:
 
-\begin{figure}
+\begin{figure}[H]
     \begin{tikzpicture}
         \begin{axis}[
             ybar stacked,
@@ -255,6 +258,7 @@ publication rate and the type of publication:
         \end{axis}
     \end{tikzpicture}
     \caption{Publication activity}
+    \label{fig:publicationActivity}
 \end{figure}
 
 The distribution of publications over the years gives a detailed intuition
@@ -264,21 +268,20 @@ in the diagram above, the topic grew more important over the years 2017 and
 the number of publications \cite{waseem:SMSMSADevOps}.
 
 As for the publication types, over those four years, 23 studies
-were published in conference proceedings, 12 in journals, 8 in book chapters
-and merely 4 as workshop papers \cite{waseem:SMSMSADevOps}.
+were published in conference proceedings, twelve in journals, eight in book chapters
+and merely four as workshop papers \cite{waseem:SMSMSADevOps}.
 
 The 47 considered papers were all published in 41 venues. The venues
-themselves can be devided into four different categories. 17 of the 41
+themselves can be divided into four different categories. 17 of the 41
 venues count towards the topic \textbf{Internet, Cloud, and Services Computing}.
 Another 16 are categorizes as \textbf{Software Engineering} venues. The remaining
-8 are split evenly between \textbf{Telecommunications and Networks} with 4 venues
-and \textbf{Multi-Disciplinary computing} also with 4 venues \cite{waseem:SMSMSADevOps}.
+eight are split evenly between \textbf{Telecommunications and Networks} with four venues
+and \textbf{Multi-Disciplinary computing} also with four venues \cite{waseem:SMSMSADevOps}.
 
 As for RQ1.2, the result shows, that top two subtopics of the publications
-are \textit{Approaches} (13 studies) and \textit{Tools} (12 studies).
-The least discussed topic, with only 4 studies, is \textit{Monitoring}
+are \textit{Approaches} (13 studies) and \textit{Tools} (twelve studies).
+The least discussed topic, with only four studies, is \textit{Monitoring}
 of microservices \cite{waseem:SMSMSADevOps}.
-
 
 \subsubsection{Problems, Solutions, and Challenges}
 
@@ -288,50 +291,81 @@ There exist several problems that could not be mapped with a documented
 solution so they represent challenges that need further investigation
 to provide the community with possibilities to resolve the problem.
 
-The following list should give a brief overview of the identified
-problems \cite{waseem:SMSMSADevOps}:
+The following lists should give a brief overview of the identified
+problems with an associated problem category. Inside the problem domain,
+the problems are not specifically ordered \cite{waseem:SMSMSADevOps}.
 
+\textbf{Requirements of MSA-based Systems in DevOps}
 \begin{itemize}
     \item Performance Issue due to Lack of Dedicated Access
     to the Host's Hardware
     \item Empowering Developers through Intelligent Software
     \item Performance Overhead due to Fine Grain Decomposition
     \item Scaling MSA-based Systems
+\end{itemize}
+
+\textbf{Design of MSA-based Systems in DevOps}
+\begin{itemize}
     \item Security and Privacy Across Cloud-Native Applications
     \item Providing Flexible Authentication to Each DevOps Team
     \item Application Decomposition into Microservices
     \item Reducing the Uncertainty in MSA
+\end{itemize}
+
+\textbf{Implementation of MSA-based Systems in DevOps}
+\begin{itemize}
     \item Managing and Migration Legacy Databases
     \item Modification and Integration of New Functionality in Existing
     Microservices
     \item Operational and Configuration Complexity
+\end{itemize}
+
+\textbf{Testing of MSA-based Systems in DevOps}
+\begin{itemize}
     \item Testing of MSA-based Systems in DevOps
+\end{itemize}
+
+\textbf{Deployment of MSA-based Systems in DevOps}
+\begin{itemize}
     \item Frequent Deployment in Different Environments
     \item Complexity in the Dynamic Deployment
     \item Deployment of MSA-based SaaS at Fine Granular Level
     \item Automatic Optimal Deployment of MSA-based Systems
+\end{itemize}
+
+\textbf{Monitoring of MSA-based Systems in DevOps}
+\begin{itemize}
     \item Logging and Post-Deployment Monitoring
     \item Monitoring and Execution of the Adaptive Actions
     \item Establishing and Maintaining Monitoring Infrastructure
     \item Monitoring Microservices at Run Time
+\end{itemize}
+
+\textbf{Organizational Problems}
+\begin{itemize}
     \item Introducing DevOps and MSA Culture
     \item People Resistance to Adopting DevOps and Microservices
     \item Less Familiarity with Implementing DevOps
+\end{itemize}
+
+\textbf{Resource Management Problems}
+\begin{itemize}
     \item Resource management for Development, Deployment,
     and Maintenance of the Cloud-Native Systems
 \end{itemize}
 
-For the shown list of problems, at least one solution was provided
-in some considered publication which can be viewed in ``Figure 6''
+For each of the problems in the shown lists, the considered publications
+provide at least one solution which can be viewed in ``Figure 6''
 of the reviewed study. In general, a purposed idea to tackle multiple
 of the problems is to try not to decompose microservice applications
 too fine-grain \cite{waseem:SMSMSADevOps}. As for the general problem
-category of ``designing MSA based systems'' multiple solutions are provided.
+category ``designing MSA based systems'', multiple solutions are provided.
 Many different architectures are promoted and evaluated \cite{waseem:SMSMSADevOps}.
 
 To implement MSA based systems in a DevOps context, many studies suggest
 automated pipelines as well as automatic testing libraries. For communicating
-with other services, agnostic technologies should be used (like REST over HTTP)
+with other services, agnostic (i.e. independent and non-proprietary)
+technologies should be used (like REST over HTTP)
 to negate the need of knowledge of a specific programming language 
 \cite{waseem:SMSMSADevOps}.
 
@@ -395,7 +429,8 @@ emerged \cite{waseem:SMSMSADevOps}:
     \item Unified Modeling Language (UML)
     \item Formal method (e.g. $\pi$-Calculus or equivalent)
     \item Architecture Description Language (ADL)
-    \item Others
+    \item Entity Relationship Diagrams (ERD) or Business
+    Process Modeling Notations (BPMN)
 \end{enumerate}
 
 Out of the 47 studies, 46 used some kind of description.
@@ -416,14 +451,27 @@ The distribution is show in the following diagram:
 
 To achieve microservice architecture in complex systems, a multitude of
 patterns are purposed over all studies. The SMS identified 38 different design
-patterns across all regarded papers. The following list should give a brief
-overview over the top three recurring patterns \cite{waseem:SMSMSADevOps}:
+patterns across all regarded papers. \smsAuthors organized the mentioned
+patterns in the following three categories \cite{waseem:SMSMSADevOps}:
 
 \begin{enumerate}
-    \item Circuit Breaker (5 studies)
-    \item Migration pattern (4 studies)
-    \item Observer pattern (2 studies)
+    \item Circuit Breaker (five studies)
+    \item ``Migration pattern'' (four studies) \cite{waseem:SMSMSADevOps}
+    \footnote{The reviewed SMS does not disclose which specific patterns or languages
+    refers to here}
+    \item Observer pattern (two studies)
 \end{enumerate}
+
+The circuit breaker pattern enables an MSA-based system to ``fail fast''. 
+The pattern aims to prevent parts of a microservice architecture to cascade
+a failure beyond its own boundaries, which in turn could lead to a total
+system failure. Instead of waiting for unresponsive services, after some time
+the circuit breaker assumes the worst and deals with the fact that the
+work unit has become unavailable \cite{montesi:CircuitBreakers}.
+
+The observer pattern is a software design pattern in which some object (i.e. the ``subject'')
+maintains a list of observers. Whenever the subject changes its state, it automatically
+notifies all observers \cite{gof:DesignPatterns}.
 
 Regarding affected quality attributes when using MSA in the DevOps context,
 the presence of said quality attributes (QA) was confirmed by the SMS.
@@ -442,25 +490,25 @@ The studies listed the following QAs as being positively influenced:
     \item Flexibility (20 studies)
     \item Availability (19 studies)
     \item Efficiency (19 studies)
-    \item Security (10 studies)
-    \item Portability (6 studies)
-    \item Compatibility (5 studies)
-    \item Modifiability (5 studies)
-    \item Usability (1 study)
+    \item Security (ten studies)
+    \item Portability (six studies)
+    \item Compatibility (five studies)
+    \item Modifiability (five studies)
+    \item Usability (one study)
 \end{itemize}
 
 \textbf{Negative}
 Some studies listed the following QAs as being negatively influenced:
 \begin{itemize}
-    \item Security (11 studies)
-    \item Performance (9 studies)
-    \item Scalability (2 studies)
-    \item Reliability (2 studies)
-    \item Availability (1 study)
-    \item Compatibility (1 study)
-    \item Maintainability (1 study)
-    \item Modifiability (1 study)
-    \item Usability (1 study)
+    \item Security (eleven studies)
+    \item Performance (nine studies)
+    \item Scalability (two studies)
+    \item Reliability (two studies)
+    \item Availability (one study)
+    \item Compatibility (one study)
+    \item Maintainability (one study)
+    \item Modifiability (one study)
+    \item Usability (one study)
 \end{itemize}
 
 To have a view from positively mentioned against negatively mentioned,
@@ -539,7 +587,6 @@ consider the following chart:
     \caption{Influenced Quality Attributes}
 \end{figure}
 
-
 \subsubsection{Tool support and application domains}
 
 The fourth category of research questions regards tooling support
@@ -547,41 +594,54 @@ and given application domains. The SMS identified 50 different tools and
 11 application domains.
 
 The various tools can be seen in Fig. 7 in the SMS \cite{waseem:SMSMSADevOps}.
-They were categorized in the following list:
+The authors categorized them in the following list:
 
 \begin{itemize}
     \item Security Services and Tools (14 tools)
-    \item Monitoring Tools (11 tools)
-    \item Continuous Integration Tools (7 tools)
-    \item Testing Tools (6 tools)
-    \item Configuration Management Tools (5 tools)
-    \item Build Tools (5 tools)
-    \item Version Control Tools (2 tools)
+    \item Monitoring Tools (eleven tools)
+    \item Continuous Integration Tools (seven tools)
+    \item Testing Tools (six tools)
+    \item Configuration Management Tools (five tools)
+    \item Build Tools (five tools)
+    \item Version Control Tools (two tools)
 \end{itemize}
 
 The last RQ that is to be answered, is which application domains
 exploit the combination of MSA with DevOps. The SMS pinpointed nine
 application domains with analyzation of the systems and topics
-in the regarded studies. The given domains are stated below \cite{waseem:SMSMSADevOps}.
+in the regarded studies. \smsAuthors identified the following
+application domains in their study \cite{waseem:SMSMSADevOps}:
 
 \begin{itemize}
-    \item Not Mentioned
-    \item Software Development Tools and Framework
-    \item Telecommunication
-    \item Mobile Software
-    \item E-Commerce system
-    \item Embedded system
-    \item Financial software
-    \item Healthcare software
-    \item Webserver
-    \item Distributed system
-    \item Others
+    \item Not Mentioned (15 studies) \footnote{Those 15 studies
+    did not mention any specific information regarding application
+    domains}
+    \item Software Development Tools and Framework (eleven studies)
+    \item Telecommunication (six studies)
+    \item Mobile Software (four studies)
+    \item E-Commerce system (three studies)
+    \item Embedded system (three studies)
+    \item Financial software (three studies)
+    \item Healthcare software (one study)
+    \item Webserver (one study)
+    \item Distributed system (one study)
+    \item Autonomic Management System (one study)
+    \item Betting and Gaming (one study)
+    \item Web Blog (one study)
+    \item eServices Developments (one study)
+    \item Container Management System (one study)
+    \item Content Management (one study)
+    \item Software for non-profit (one study)
 \end{itemize}
 
+As this list shows, beside studies that did not mention their concrete
+application domain, ``Software Development Tools and Framework''
+has gained the most attention of all identified application domains
+in the study \cite{waseem:SMSMSADevOps}.
 
 \subsection{Discussion}
 
-The following sections will summarize the ``Discussion'' of the SMS. The study
+The following sections summarizes the ``Discussion'' of the SMS. The study
 analyzed the found results and explained certain trends.
 
 \subsubsection{Research status and themes}
@@ -593,8 +653,8 @@ The study noticed, that 41 papers were published from January 2016 until July 20
 \cite{waseem:SMSMSADevOps}.
 
 As seen in the systematic classification of the research themes, the most recurring
-topics are ``Tools'' with 13 studies, ``Approaches'' with 12 studies and
-``Development and Deployment'' with 12 studies. This indicates, that the research
+topics are ``Tools'' with 13 studies, ``Approaches'' with twelve studies and
+``Development and Deployment'' with twelve studies. This indicates, that the research
 is not only centered around new tools, but also regards development life-cycles
 as well. On the other hand, there were no publications found that focus on
 the topic of ``Requirements Engineering'', be it practices or any other
@@ -620,7 +680,7 @@ across the whole system. Also, when containers are used, the hardware underneath
 has a high impact on performance. The study shows that Amazon EC2 containers are
 worse than applications deployed on Amazon EC2 VMs \cite{waseem:SMSMSADevOps}.
 
-The second topic that gets addressed a lot is security. When just ``translating''
+The second topic that gets addressed with high frequency, is security. When just ``translating''
 applications to MSA, most of the time, security concerns arise. MSA based systems
 create complex access control scenarios without any matured patterns to harden
 the systems against attackers \cite{waseem:SMSMSADevOps}.
@@ -634,9 +694,9 @@ the creation of a standard description method for describing MSA
 \cite{waseem:SMSMSADevOps}.
 
 The used design patterns are shown in the corresponding table in the SMS.
-The most observed pattern is the ``Circuit Breaker'' pattern which indicates,
+The most observed pattern is the ``Circuit Breaker'' \cite{montesi:CircuitBreakers} pattern which indicates,
 that cascading failures are a major concern. Next in line is the ``Migration
-Pattern'' that recommends various best practices for the transition from
+Pattern'' \cite{waseem:SMSMSADevOps} that recommends various best practices for the transition from
 a monolytic application to a MSA based system.
 A not so well covered topic are patterns and recommendations
 that support CI/CD in MSA \cite{waseem:SMSMSADevOps}.

@@ -1,13 +1,15 @@
 \section{Critical review of the paper}
+\label{sec:review}
 
-The following section will contain a critical review of the conducted study.
-The review will contain statements about the used empirical engineering methods
+The following section is a critical review of the conducted study.
+The review contains statements about the used empirical engineering methods
 as well as the found results and the followed discussion about the results.
 
-As a general critique to the layout of the study should be said that it was
-bumpy to read. There are many tables and figures which explain the results
+As a general critique, the layout of the study should help
+the reader through the paper smoothly.
+There are many tables and figures which explain the results
 quite efficient and to the point, but the layout of the study forces the
-reader to jump around when going through the study. It could have been
+reader to jump around when going through it. It could have been
 a better approach to move all figures and tables to an appendix
 and have the text reference them.
 
@@ -25,33 +27,39 @@ of MSA and DevOps.
 \subsection{Empirical Research Methods}
 
 The study used the purposed guidelines of peer-reviewed publications
-to conduct the SMS. It is well thought to adjust and combine some of the guidelines
+to conduct the SMS. The authors did adjust and combine some of the guidelines
 according to the peculiarities of the topic.
 
 \subsubsection{Research Questions}
 
 The research questions are well structured into categories.
-However, in the categories 2 to 4, the research questions are to broad.
-Some of the questions should be split up into finer definitions or
+However, the RQs in categories two to four appear too broad
+in my opinion. Some of the questions should be split up into finer definitions or
 should be more specific.
 
-\begin{itemize}
-    \item \textbf{RQ2.1}: The problems that have been reported should be split
-    into categories. Are the problems centered around general understanding of
-    MSA, is it troubling to deploy and maintain a MSA based system or
-    is the development (migration or new solution) process problematic?
-    \item \textbf{RQ3.2}: The stated question about design patterns does
-    cover \textit{all possible pattern-topics}. So the question addresses
-    patterns that are used for developing microservice applications and
-    other patterns that recommend a way to migrate a monolyth to a MSA.
-    A categorization between the patterns would help the reader to
-    grasp the results in the correct context.
-    \todo{how could this be described? "äpfel mit birnen vergleich"}
-    \item \textbf{RQ4.1}: A similar categorization should be used for the
-    research question about available tooling. Currently, this question
-    ranges from planning tools (e.g. Jira) to tools for version control
-    (e.g. GitHub).
-\end{itemize}
+\textbf{RQ2.1} \textit{``What problems have been reported 
+when implementing MSA in DevOps?''} \wsl:
+The problems that have been reported should be split
+into categories. Are the problems centered around general understanding of
+MSA, is it troubling to deploy and maintain a MSA based system or
+is the development (migration or new solution) process problematic?
+
+\textbf{RQ3.2} \textit{``What MSA design patterns are used in DevOps?''} \wsl:
+The stated question about design patterns does
+cover \textit{all possible pattern-topics}. So the question addresses
+patterns that are used for developing microservice applications and
+other patterns that recommend a way to migrate a monolith to a MSA.
+A categorization between the patterns would help the reader to
+grasp the results in the correct context. As an example this could be done
+with a \textit{4+1 viewpoint} model (\textit{Logical view},
+\textit{Development view}, \textit{Process view}, \textit{Physical view},
+and \textit{Scenarios}) from P.B. Kruchten \cite{kruchten:Viewmodels}.
+
+\textbf{RQ4.1} \textit{``What tools are available to support MSA in DevOps?''} \wsl:
+A similar categorization should be used for the
+research question about available tooling. Currently, this question
+ranges from planning tools (e.g. Jira) to tools for version control
+(e.g. GitHub).
 
 \subsubsection{Search strategy and Snowballing}
 
@@ -74,18 +82,28 @@ to the year 2018, many new techniques and publications were ignored.
 
 The limitation of the search to only allow peer-reviewed publications
 to be relevant does filter out some solutions to given problems and
-even challenges. It is the nature of computer science, that many
-solutions are only described in blog posts or as showcases. This
-is driven by the industry which adopts to new technologies and develops
-tools, patterns and best practices for the challenges at hand.
-It would have been a good approach to search for the problems along
+even challenges. In computer science, one big driving force
+of innovation are companies that need solutions and tools for the
+current problems at hand. Companies tend to have shorter innovation-cycles
+than the academia. With this matter in mind, many solutions are only described
+in blog posts or as showcases. It would have been a good approach to search for the problems along
 the peer-reviewed papers and allow some gray literature in the
 discussion to give advice to certain challenges and/or problems.
+
+The search queries
+``\texttt{((microservi* OR micro-servi*) AND (architect* OR design OR structur*) AND DevOps)}''
+and ``\texttt{(microservice AND DevOps)}'' \wsls
+also exclude a relatively large portion of potential publications since 
+the term ``DevOps'' is mandatory and without variants. While different
+writing styles and variants were used for the term ``Microservice'', the term ``DevOps''
+is just plainly searched. There could also be material, that does not
+contain the term in the title at all. Those papers are excluded as well.
 
 \subsubsection{Quality assessment}
 
 The given screening criteria are well defined and create
-an exact baseline for the found papers.
+an exact baseline for the found papers such as the
+language of the publication or if it is peer-reviewed.
 
 The stated qualitative criteria are nicely balanced
 and provide a good assessment of the found publications.
@@ -98,8 +116,8 @@ for the topic of the SMS.
 
 \subsection{Results and Discussion}
 
-The derived results and the subsequent discussion are
-extensively described. Some findings and argumentation
+\smsAuthors extensively describe the derived results and
+the subsequent discussion. Some findings and argumentation
 spark questions however.
 
 \subsubsection{Problems and Solutions}
@@ -117,50 +135,66 @@ Netflix uses something they call ``Chaos testing''. The goal of this
 so called ``Chaos Monkey''\footnote{\url{https://github.com/Netflix/chaosmonkey}}
 is to test whole systems for resiliency by shutting down services,
 nodes, and entire clusters at random times. This is a specific testing use-case
-for MSA and cloud-ready systems. Since no system can guarantee 100\% uptime,
+for MSA and cloud-ready systems. Since no system can guarantee 100\% up-time,
 the chaos monkey introduces interruptions that the system must handle.
 The system should depend on some services not being available. With that
-in mind, a resilient system can be created \cite{netflix:SimianArmy}.
+in mind, a resilient system can be created \cite{netflix:SimianArmy,basiri:ChaosEngineering}.
 
 \subsubsection{Research Challenges}
 
 The first research challenge \textit{Performance issues
 due to frequent communication} does state that too fine-grain
 MSA introduce complexity. I would like to argue, that nearly
-all fine-grain systems introduce complexity. This does not correlate
-with performance in general. The biggest issue, in terms of performance,
+all fine-grain systems introduce complexity. The biggest issue, in terms of performance,
 with fine-grain MSA is the direction of the call-flow.
 Each level in this ``service depth'' does add to the total amount of
-time needed to compute the request of the user. Imagine a system
-where five services in sequence depend on each other. Each service
-does add 200ms computing time. The total request would run for 1s.
+time needed to compute the request of the user.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \begin{sequencediagram}
-        \newinst {caller}{Caller}
-        \newinst {a}{A}
-        \newinst {b}{B}
-        \newinst {c}{C}
-        \begin{call}{caller}{call()}{a}{}
-            \begin{call}{a}{call()}{b}{}
-                \begin{call}{b}{call()}{c}{}
-                \end{call}
-            \end{call}
-        \end{call}
-    \end{sequencediagram}
+    \includegraphics[width=\columnwidth]{images/service_depth.png}
     \caption{Deep MSA problem}
+    \label{fig:deepMSA}
 \end{figure}
+
+The problem with ``service depth'' is not the performance
+impact of computation itself in a work unit, but the general impact
+on the overall system when chaining subsequent units together.
+\autoref{fig:deepMSA} shows such a scenario. For the sake of
+simplicity, let us assume that each call in \autoref{fig:deepMSA}
+(i.e. Client to Api, Api to IAM\footnote{\label{fn:IAM}Identity and Access Management},
+Service to Service, and Service to Datastore) takes \texttt{100ms}.
+
+The assumed time contains computation, transformation from and to
+the transport protocol and the round trip.
+The basic idea is to show the performance impact when chaining services
+into a ``deep system''.
+With the given description, let us consider the following two scenarios:
+
+\begin{enumerate}
+    \item \textit{Client sends a SMS}:
+    Client $\rightarrow$ Api $\rightarrow$ SMS Service. Api and SMS Service make
+    a credentials check at the IAM\textsuperscript{\ref{fn:IAM}}.
+    The successful response to the client
+    is delivered after: $4 * 100ms = 400ms$
+    \item \textit{Client requests a document}:
+    Client $\rightarrow$ Api $\rightarrow$ Document Service $\rightarrow$
+    Reader Service $\rightarrow$ Data Service $\rightarrow$ Data Store.
+    All services check the credentials with the IAM\textsuperscript{\ref{fn:IAM}}.
+    The successful response to the client
+    is delivered after: $100ms \text{(Client)} + 4*100ms \text{(IAM)}
+    + 3*100ms \text{(Services)} + 100ms \text{(DB)} = 900ms$
+\end{enumerate}
 
 A possible solution to this particular problem is to plan
 the microservices and the corresponding architecture accordingly.
-Frequent review of the current architectural state and refactoring
+Frequent review of the current architecture and refactoring \cite{zio:ARforCloud}
 if needed are key to prevent too deep services. This can happen
 in a very agile way since one of the basic goals of MSA is
 to have fast deployable artifacts.
 
 The usage of synchronous HTTP calls will definitely result
-in a performance penalty. Systems like PubSub could help
+in a performance penalty. Systems like ``Google PubSub'' could help
 mitigate this bottleneck and create the possibility to scale
 instances of microservices on the horizontal scale.
 Furthermore, Kubernetes, among other orchestration platforms, provide developers with
@@ -169,11 +203,11 @@ such as ``services'' which map to instances of the given services.
 
 The statement about hardware is accurate. Depending on the hardware,
 the performance of the whole MSA based system will vary. For example,
-let's consider a microservice that was developed with
-PHP\footnote{\url{https://www.php.net/}}. It is in he very nature of PHP
-to load the \texttt{*.php} script files for each and every call that
+let us consider a microservice that was developed with
+PHP\footnote{\url{https://www.php.net/}}. Depending on the used framework,
+PHP loads the \texttt{*.php} script files for each and every call that
 is made to the application. Since those script files are not cached
-in memory or any compiled form, when the underlaying hardware contains
+in memory or any compiled form, when the underlying hardware contains
 storage with normal hard disk drives instead of solid state disks,
 the performance impact is huge. On the other hand, a compiled application
 like a C\# Web-Application does load itself into the memory of the
@@ -185,7 +219,7 @@ on itself and in conjunction with MSA, it does not get any easier.
 Several patterns exist, that can provide some mechanism of security,
 but as always, there is no silver bullet. A good strategy to
 authenticate and authorize calls made from a source would be the usage
-of OIDC \cite{Siriwardena:OIDC}. OIDC (OpenID Connect) enables
+of OpenID Connect (OIDC) \cite{Siriwardena:OIDC}. OIDC enables
 a system to have a centralized user and access management. The
 calls are authenticated with a token and each microservice can check
 if the call is authenticated and valid or not. As for authorization,
@@ -195,7 +229,7 @@ in the given microservice with the provided token.
 
 \subsubsection{Quality attributes}
 
-The SMS does a brilliant job at showing the positive and negative
+The SMS does a good job at showing the positive and negative
 statements of the relevant studies. The comparison and categorization
 is well done and gives an overview which topics contain solutions
 for non-MSA-problems and which problems are newly introduced by
@@ -219,13 +253,9 @@ and sends them to an ELK\footnote{\url{https://www.elastic.co/elastic-stack}} st
 Filebeat itself does nothing in terms of security, it is a log analyzer.
 
 Furthermore, the vast majority of the listed tools are ``Enterprise Tools''.
-This means that they are used and managed by big enterprises. This does
-not necessarily mean they are not worth a try, but they tend to be aged
-and not created according to the newest and latest patterns and
-practices. In addition, the found tools show, that the academia mostly uses
-Java (Ant, Maven, Gradle) and Ruby (Rake). In the modern web development
-world however, there exist a variety of build tools and languages (Node.JS/webpack,
-C\#/dotnet and TypeScript/tsc to name a few).
+This does not necessarily mean they are not worth a try,
+but they tend to be aged and not created according to the
+newest and latest patterns and practices.
 
 There are many open-source industry driven tools missing. Many
 modern companies use newer and more state-of-the-art tools.
@@ -247,9 +277,9 @@ A few examples:
     \item \textbf{ArgoCD} \textit{Configuration Management}: ArgoCD is an
     application that manages applications declaratively (GitOps pattern).
     Instead of using a CI pipeline to deploy an application to a cluster,
-    the CI pipeline only creates the artifact (e.g. a docker image) and publishes
+    the CI pipeline only creates the artifact (e.g. a Docker image) and publishes
     it somewhere. Then the pipeline can update the declarative description
-    of the application with the new version of the image and argo will
+    of the application with the new version of the image and Argo will
     be aware of the change and therefore will deploy the new image
     (\url{https://argoproj.github.io/argo-cd/})
 \end{itemize}
