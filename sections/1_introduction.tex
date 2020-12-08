@@ -1,4 +1,5 @@
 \section{Introduction}
+\label{sec:introduction}
 
 This paper is a review of the systematic mapping study
 ``A Systematic Mapping Study on Microservices Architecture in DevOps'' \cite{waseem:SMSMSADevOps}.
@@ -20,39 +21,40 @@ Some of the problems do not have a solution because gray literature is
 not allowed in the search.
 
 The remainder of the paper will introduce terms and principles that are used
-in the reviewed study, as well as topics that are needed for the understanding
-of the study and this review. Furthermore, a neutral summary of the reviewed study
-\cite{waseem:SMSMSADevOps} is provided. After the summary a critical review
-is conducted and then a conclusion is derived from the previous sections.
-
+in the reviewed study, as well as topics that a reader needs for the understanding
+of the study and this review. Furthermore, this paper creates an objective summary,
+a critical review and a derived conclusion of the reviewed paper \cite{waseem:SMSMSADevOps}.
 
 \subsection{Design Science}
 
 Design Science has the main purpose of achieving knowledge and a general understanding
-about a domain \cite{hevner:DesignScience}. Design Science contains several guidelines
+about a domain. Design Science contains several guidelines
 according to Alan R. Hevner (among other authors). Those guidelines are \cite{hevner:DesignScience}:
 
 \begin{itemize}
     \item \textit{Design as an artefact}: Design Science must produce an artifact
     \item \textit{Problem relevance}: The objective is to develop solutions to relevant business problems
-    \item \textit{Design evaluation}: The utility of an artifact must be demonstrated with evaluation methods
+    \item \textit{Design evaluation}: The usefulness of an artifact must be demonstrated with evaluation methods
     \item \textit{Research contributions}: It must provide clear and verifiable contributions to the topic
     \item \textit{Research rigor}: The research relies on rigorous methods in construction and evaluation of the model
     \item \textit{Design as a search process}: The search for artifacts requires satisfying laws to be in place
     \item \textit{Communication of research}: The targeted audience should be technology-based as well as management based
 \end{itemize}
 
+With this guidelines, it is possible to model a domain of interest and acquire
+specific knowledge about it.
 
 \subsection{Empirical Software Engineering}
 
-Empirical Software Engineering (ESE) provides a solid base for discussion and methods for empirical
-research regarding software engineering topics. It has a strong emphasis on \textit{empirical}.
+Empirical Software Engineering (ESE) provides a base for discussion and methods for empirical
+research regarding software engineering topics. \textit{Empirical} means in the context
+of software engineering that various results are taken into consideration. The results
+of the methods are proven by existing publications.
 
 \subsubsection{Systematic Mapping Study (SMS)}
 
 A SMS is a defined method to gather, analyze, classify, and structure a field of interest.
-The result of an SMS allows readers and researchers to determine the coverage of the given
-field of interest \cite{petersen:SMS}. The analysis focuses on frequency and topics for a
+The analysis focuses on frequency and topics for a
 field. It is a defined process in which the following steps take place \cite{petersen:SMS}:
 
 \begin{enumerate}
@@ -63,12 +65,24 @@ field. It is a defined process in which the following steps take place \cite{pet
     \item Classify and map the given articles
 \end{enumerate}
 
+The result of an SMS allows readers and researchers to determine the coverage of the given
+field of interest \cite{petersen:SMS}. In the reviewed paper, the search yielded 47
+publications as ``relevant'' for the SMS.
+
 \subsubsection{Systematic Literature Review (SLR)}
 
-A SLR is a method of ESE to systematically analyze and review a given topic. It uses
+An SLR is a method of ESE to systematically analyze and review a given topic. It uses
 methods to collect secondary data and critically reviews the given research study.
 The search for additional data can involve published as well as unpublished work
-on the subject \cite{siddaway:SLR}.
+on the subject \cite{siddaway:SLR}. SLR and SMS both enable researcher to acquire
+knowledge about a topic. Whereas the SMS does this on a wide scale, the SLR
+goes into depth of a domain of interest. Babak Farshchian and Yngve Dahl described
+the difference as: ``An SMS uses the same basic methodology for searching and 
+analyzing literature as in a SLR. An SMS, on the other hand, aims at
+creating a map of a wide research field. \dots The knowledge created by an SMS can be
+used as the basis for further research (Kitchenham et al 2011),
+for instance, as a pre-study for one or several
+SLRs in specific areas.'' \cite{farshchian:SMSvsSLR}.
 
 \subsubsection{Systematic Gray Literature Review (SGLR)}
 
@@ -78,7 +92,9 @@ but also ``Gray Literature''. Gray literature is evidence and material that
 is not published in commercial and peer reviewed publications \cite{paez:GrayLiterature}.
 In the context of computer science, gray literature can provide important statements
 and evidence towards topics that are more driven by businesses than by the academia.
-
+Commercial companies drive the innovation around computer science nowadays. 
+Those companies need solutions for acute problems and therefore do not wait on papers and evidence
+to be peer-reviewed until they move on.
 
 \subsection{Microservices and DevOps}
 
@@ -90,33 +106,38 @@ understands the base of the terms on which the conclusions are built upon.
 
 Microservices (sometimes referred to as ``Microservice Architecture'') is an application
 structural style. The style focuses on building several small services that cooperate
-together to create an application \cite{richardson:whatIsMSA}. Those services are often deployed on distributed
-systems. Most microservices adhere to the following principles \cite{richardson:whatIsMSA}:
+together to create an application. Those services are often deployed on distributed
+systems. Microservices adhere to the following tenets \cite{zio:MSATenets}:
 
 \begin{itemize}
-    \item Highly maintainable and testable
-    \item Loosely coupled
-    \item Independently deployable
-    \item Organized around business capabilities
-    \item Owned by small teams
+    \item \textit{Fine-grained interfaces}: The work unit encapsulates logic
+    around a single topic of work and exposes the interface remotely
+    \item \textit{Domain-Drive Design (DDD)}: The services are conceptional
+    created around business-driven development patterns
+    \item \textit{IDEAL}: \textbf{I}solated State, \textbf{D}istribution,
+    \textbf{E}lasticity, \textbf{A}utomated Management and \textbf{L}oose Coupling
+    \item \textit{Polyglot Persistence}: Multiple programming paradigms (e.g.
+    object-oriented and functional) and storage paradigms (e.g. NoSQL and relational
+    database systems) are used in a polyglot programming and persistence strategy
+    \item \textit{Lightweight Containers}: The work units are containerized and
+    deployed via corresponding channels (e.g. Docker)
+    \item \textit{Automated Continuous Delivery}: During service development,
+    a high degree of automation is used to deploy the work unit
+    \item \textit{Lean Holistic Management (DevOps)}: Largely automated practices
+    are used to tackle configuration, performance, monitoring and fault management
 \end{itemize}
 
-The following image should provide a vague idea of how microservices are structured
-and organized \cite{richardson:whatIsMSA}:
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{images/Microservice_Architecture.png}
-    \caption{Example of a Microservice Architecture}
-\end{figure}
+These tenets define the work units of a microservice architecture. This makes
+a MSA a highly flexible and dynamic approach to develop software \cite{zio:MSATenets}.
 
 \subsubsection{DevOps}
 
-The term ``DevOps'' is a mash-up between ``Development'' and ``Operations''. Two
-strong and important terms in modern software engineering. The goal of DevOps is to
-automate end-to-end in software development and delivery \cite{ebert:DevOps}. It enables
-developers to deploy and operate their software autonomously and - in smaller teams - without
-any specialized ``Ops'' department. It closes the gap between the classical
-software engineers and the operations team which both had their specific tasks. DevOps
-provides the means and tools to provide an agile method of software engineering with
-\textit{continuous integration} and \textit{continuous deployment} \cite{huettermann:DevOps}.
+The term ``DevOps'' is a mash-up between ``Development'' and ``Operations''
+which are two strong and important terms in modern software engineering.
+DevOps provides a set of practices with the intend to reduce the time
+of a change to the code to the production environment
+while maintaining a high quality of the software \cite{bass:devops}. As an example, when a change
+is committed to the version control system (VCS), like GitHub, the build pipeline
+will test and build the container automatically. Afterwards, the container
+is deployed to a test environment and on acknowledgement, the container is
+then shipped to production.
