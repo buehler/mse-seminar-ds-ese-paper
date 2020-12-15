@@ -16,7 +16,7 @@ results \cite{waseem:SMSMSADevOps}.
 
 \subsection{Motivation}
 
-The purpose of the reviewed paper is to create an SMS to understand how 
+The purpose of the reviewed paper is to create an SMS to understand how
 Microservice Architecture (MSA) is used in conjunction with DevOps.
 Furthermore the objective is to identify, analyze and categorize the
 existing literature and research around the given topic.
@@ -44,79 +44,79 @@ The authors built the conducted SMS upon the guidelines purposed by Kai Petersen
 
 \subsection{Research Questions}
 
-Ten different RQs in four categories were derived 
+Ten different RQs in four categories were derived
 according to the goal of the paper \cite{waseem:SMSMSADevOps}:
 
 ~\\
 \begin{table}[H]
-    \begin{tabularx}{\columnwidth} { 
-        | m{0.12\columnwidth} 
-        | X | }
+    \begin{tabularx}{\columnwidth} {
+            | m{0.12\columnwidth}
+            | X |}
         \hline
         \multicolumn{2}{ | X | }{
             Category 1: Demography, classification,
             and mapping of research
-        } \\
+        }                                                  \\
         \hline
         RQ1.1
-        &
+         &
         What is the frequency and type of published research
-        on MSA in DevOps? \\
+        on MSA in DevOps?                                  \\
         \hline
         RQ1.2
-        &
+         &
         What are the existing research themes on MSA in
-        DevOps and how can they be classified and mapped? \\
+        DevOps and how can they be classified and mapped?  \\
         \hline
         \multicolumn{2}{ | X | }{
             Category 2: Problems, solutions, and challenges
-        } \\
+        }                                                  \\
         \hline
         RQ2.1
-        &
+         &
         What problems have been reported when implementing
-        MSA in DevOps? \\
+        MSA in DevOps?                                     \\
         \hline
         RQ2.2
-        &
+         &
         What solutions have been employed to address the
-        problems? \\
+        problems?                                          \\
         \hline
         RQ2.3
-        &
+         &
         What challenges have been reported when
-        implementing MSA in DevOps? \\
+        implementing MSA in DevOps?                        \\
         \hline
         \multicolumn{2}{ | X | }{
             Category 3: MSA description methods, patterns,
             and quality attributes
-        } \\
+        }                                                  \\
         \hline
         RQ3.1
-        &
-        What methods are used to describe MSA in DevOps? \\
+         &
+        What methods are used to describe MSA in DevOps?   \\
         \hline
         RQ3.2
-        &
-        What MSA design patterns are used in DevOps? \\
+         &
+        What MSA design patterns are used in DevOps?       \\
         \hline
         RQ3.3
-        &
+         &
         What quality attributes are affected when employing
-        MSA in DevOps? \\
+        MSA in DevOps?                                     \\
         \hline
         \multicolumn{2}{ | X | }{
             Category 4: Tool support and application domains
-        } \\
+        }                                                  \\
         \hline
         RQ4.1
-        &
+         &
         What tools are available to support MSA in DevOps? \\
         \hline
         RQ4.2
-        &
+         &
         What are the application domains that employ MSA in
-        DevOps? \\
+        DevOps?                                            \\
         \hline
     \end{tabularx}
     \caption{Given research questions}
@@ -143,12 +143,12 @@ the said context, the following two search-strings were compiled \cite{waseem:SM
 
 \begin{enumerate}
     \item \texttt{((microservi* OR micro-servi*)
-    AND (architect* OR design OR structur*) AND DevOps)}
+              AND (architect* OR design OR structur*) AND DevOps)}
     \item \texttt{(microservice AND DevOps)}
 \end{enumerate}
 
 It is worth noting that the contextual part ``DevOps'' is not optional nor is
-it a construct like ``microservi*''. This limits the results to publications 
+it a construct like ``microservi*''. This limits the results to publications
 that must contain the term ``DevOps'' in their title.
 
 The search was executed on the following seven databases \cite{waseem:SMSMSADevOps}:
@@ -211,44 +211,44 @@ should give some insight into the yearly publication rate and the type of public
 \begin{figure}[H]
     \begin{tikzpicture}
         \begin{axis}[
-            ybar stacked,
-            bar width=15pt,
-            nodes near coords,
-            enlargelimits=0.15,
-            legend style={
-                cells={align=left},
-                at={(0.9,1.45)}
-            },
-            ylabel={\# of Publications},
-            xlabel={Year},
-            symbolic x coords={2015, 2016, 2017, 2018},
-            xtick=data,
-            x tick label style={anchor=north},
-        ]
+                ybar stacked,
+                bar width=15pt,
+                nodes near coords,
+                enlargelimits=0.15,
+                legend style={
+                        cells={align=left},
+                        at={(0.9,1.45)}
+                    },
+                ylabel={\# of Publications},
+                xlabel={Year},
+                symbolic x coords={2015, 2016, 2017, 2018},
+                xtick=data,
+                x tick label style={anchor=north},
+            ]
             \addplot+[ybar] plot coordinates {
-                (2015,3)
-                (2016,1)
-                (2017,2)
-                (2018,2)
-            };
+                    (2015,3)
+                    (2016,1)
+                    (2017,2)
+                    (2018,2)
+                };
             \addplot+[ybar] plot coordinates {
-                (2015,1)
-                (2016,5)
-                (2017,9)
-                (2018,8)
-            };
+                    (2015,1)
+                    (2016,5)
+                    (2017,9)
+                    (2018,8)
+                };
             \addplot+[ybar] plot coordinates {
-                (2015,0)
-                (2016,4)
-                (2017,3)
-                (2018,5)
-            };
+                    (2015,0)
+                    (2016,4)
+                    (2017,3)
+                    (2018,5)
+                };
             \addplot+[ybar] plot coordinates {
-                (2015,2)
-                (2016,1)
-                (2017,1)
-                (2018,0)
-            };
+                    (2015,2)
+                    (2016,1)
+                    (2017,1)
+                    (2018,0)
+                };
             \legend{
                 \strut Book Chapters,
                 \strut Conference and Symposium Papers,
@@ -298,7 +298,7 @@ the problems are not specifically ordered \cite{waseem:SMSMSADevOps}.
 \textbf{Requirements of MSA-based Systems in DevOps}
 \begin{itemize}
     \item Performance Issue due to Lack of Dedicated Access
-    to the Host's Hardware
+          to the Host's Hardware
     \item Empowering Developers through Intelligent Software
     \item Performance Overhead due to Fine Grain Decomposition
     \item Scaling MSA-based Systems
@@ -316,7 +316,7 @@ the problems are not specifically ordered \cite{waseem:SMSMSADevOps}.
 \begin{itemize}
     \item Managing and Migration Legacy Databases
     \item Modification and Integration of New Functionality in Existing
-    Microservices
+          Microservices
     \item Operational and Configuration Complexity
 \end{itemize}
 
@@ -351,7 +351,7 @@ the problems are not specifically ordered \cite{waseem:SMSMSADevOps}.
 \textbf{Resource Management Problems}
 \begin{itemize}
     \item Resource management for Development, Deployment,
-    and Maintenance of the Cloud-Native Systems
+          and Maintenance of the Cloud-Native Systems
 \end{itemize}
 
 For each of the problems in the shown lists, the considered publications
@@ -366,7 +366,7 @@ To implement MSA based systems in a DevOps context, many studies suggest
 automated pipelines as well as automatic testing libraries. For communicating
 with other services, agnostic (i.e. independent and non-proprietary)
 technologies should be used (like REST over HTTP)
-to negate the need of knowledge of a specific programming language 
+to negate the need of knowledge of a specific programming language
 \cite{waseem:SMSMSADevOps}.
 
 Testing MSA based applications and systems should, according to the considered
@@ -377,7 +377,7 @@ right now. Which means ``unit testing'', ``integration testing'',
 The topic of deploying MSA based systems is covered mostly by containerization
 and tools like ``Docker Compose'' and ``Kubernetes'' \cite{waseem:SMSMSADevOps}.
 
-Monitoring is purposed to be addressed with frameworks like 
+Monitoring is purposed to be addressed with frameworks like
 ``Unicorn''\footnote{\url{https://www.technative.io/unicorn-framework-the-rise-of-devops-as-a-service/}}
 and patter-based approaches like Omnia\footnote{Elaborated in \cite{miglerina:Omnia}}.
 The general goal should be, that each team that owns the microservice should be enabled
@@ -407,7 +407,7 @@ remained unresolved by the papers that were accounted for \cite{waseem:SMSMSADev
 Performance issues can emerge when using too fine-grain microservices
 or when using synchronous communication channels to other services.
 
-Studies found that security tends to be neglected in general which leads 
+Studies found that security tends to be neglected in general which leads
 to severe vulnerabilities at runtime for microservice based architectures.
 
 Generating models for MSA systems at runtime seems to be an unresearched
@@ -429,13 +429,13 @@ emerged \cite{waseem:SMSMSADevOps}:
     \item Formal method (e.g. $\pi$-Calculus or equivalent)
     \item Architecture Description Language (ADL)
     \item Entity Relationship Diagrams (ERD) or Business
-    Process Modeling Notations (BPMN)
+          Process Modeling Notations (BPMN)
 \end{enumerate}
 
 Out of the 47 studies, 46 used some kind of description.
-The distribution is shown in the following diagram:
+The distribution is shown in \autoref{fig:Distribution}.
 
-\begin{figure}[H]
+\begin{figure}[ht]
     \begin{tikzpicture}
         \pie [rotate = 180]{
             69.5/Boxes and Lines,
@@ -446,6 +446,7 @@ The distribution is shown in the following diagram:
         }
     \end{tikzpicture}
     \caption{Distribution of descriptive methods}
+    \label{fig:Distribution}
 \end{figure}
 
 To achieve microservice architecture in complex systems, a multitude of
@@ -456,12 +457,12 @@ patterns in the following three categories \cite{waseem:SMSMSADevOps}:
 \begin{enumerate}
     \item Circuit Breaker (five studies)
     \item ``Migration pattern'' (four studies) \cite{waseem:SMSMSADevOps}
-    \footnote{The reviewed SMS does not disclose which specific patterns or languages
-    refers to here}
+          \footnote{The reviewed SMS does not disclose which specific patterns or languages
+              refers to here}
     \item Observer pattern (two studies)
 \end{enumerate}
 
-The circuit breaker pattern enables an MSA-based system to ``fail fast''. 
+The circuit breaker pattern enables an MSA-based system to ``fail fast''.
 The pattern aims to prevent parts of a microservice architecture to cascade
 a failure beyond its own boundaries, which in turn could lead to a total
 system failure. Instead of waiting for unresponsive services, after some time
@@ -516,67 +517,67 @@ consider the following chart:
 \begin{figure}[H]
     \begin{tikzpicture}
         \begin{axis}[
-            ybar,
-            bar width=2pt,
-            enlargelimits=0.15,
-            legend style={
-                at={(0.5,1.2)},
-                anchor=north,legend columns=-1
-            },
-            ylabel={\# of mentions},
-            symbolic x coords={
-                Deployability,
-                Scalability,
-                Performance,
-                Maintainability,
-                Monitoring,
-                Testability,
-                Flexibility,
-                Availability,
-                Efficiency,
-                Security,
-                Portability,
-                Compatibility,
-                Modifiability,
-                Usability
-            },
-            xtick=data,
-            x tick label style={rotate=90,anchor=east},
-            nodes near coords,
-            nodes near coords align={vertical},
-        ]
+                ybar,
+                bar width=2pt,
+                enlargelimits=0.15,
+                legend style={
+                        at={(0.5,1.2)},
+                        anchor=north,legend columns=-1
+                    },
+                ylabel={\# of mentions},
+                symbolic x coords={
+                        Deployability,
+                        Scalability,
+                        Performance,
+                        Maintainability,
+                        Monitoring,
+                        Testability,
+                        Flexibility,
+                        Availability,
+                        Efficiency,
+                        Security,
+                        Portability,
+                        Compatibility,
+                        Modifiability,
+                        Usability
+                    },
+                xtick=data,
+                x tick label style={rotate=90,anchor=east},
+                nodes near coords,
+                nodes near coords align={vertical},
+            ]
             \addplot coordinates {
-                (Deployability,42)
-                (Scalability,32)
-                (Performance,26)
-                (Maintainability,27)
-                (Monitoring,23)
-                (Testability,22)
-                (Flexibility,20)
-                (Availability,19)
-                (Efficiency,19)
-                (Security,10)
-                (Portability,6)
-                (Compatibility,5)
-                (Modifiability,5)
-                (Usability,1)
-            };
+                    (Deployability,42)
+                    (Scalability,32)
+                    (Performance,26)
+                    (Maintainability,27)
+                    (Monitoring,23)
+                    (Testability,22)
+                    (Flexibility,20)
+                    (Availability,19)
+                    (Efficiency,19)
+                    (Security,10)
+                    (Portability,6)
+                    (Compatibility,5)
+                    (Modifiability,5)
+                    (Usability,1)
+                };
             \addplot coordinates {
-                (Deployability,0)
-                (Scalability,2)
-                (Performance,9)
-                (Maintainability,1)
-                (Monitoring,0)
-                (Testability,0)
-                (Flexibility,0)
-                (Availability,1)
-                (Efficiency,0)
-                (Security,11)
-                (Portability,0)
-                (Compatibility,1)
-                (Modifiability,1)
-                (Usability,1)
-            };
+                    (Deployability,0)
+                    (Scalability,2)
+                    (Performance,9)
+                    (Maintainability,1)
+                    (Monitoring,0)
+                    (Testability,0)
+                    (Flexibility,0)
+                    (Availability,1)
+                    (Efficiency,0)
+                    (Security,11)
+                    (Portability,0)
+                    (Compatibility,1)
+                    (Modifiability,1)
+                    (Usability,1)
+                };
             \legend{
                 \strut Positive,
                 \strut Negative
@@ -613,8 +614,8 @@ application domains in their study \cite{waseem:SMSMSADevOps}:
 
 \begin{itemize}
     \item Not Mentioned (15 studies) \footnote{Those 15 studies
-    did not mention any specific information regarding application
-    domains}
+              did not mention any specific information regarding application
+              domains}
     \item Software Development Tools and Framework (eleven studies)
     \item Telecommunication (six studies)
     \item Mobile Software (four studies)
