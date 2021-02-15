@@ -1,4 +1,4 @@
-\section{The reviewed mapping study}
+\section{The reviewed Study}
 \label{sec:summary}
 
 The general topic of the reviewed paper is to conduct an SMS over the topic
@@ -10,7 +10,7 @@ available. The study asks several research questions (RQs) and conducts
 a systematic mapping study (SMS) upon two defined search queries. Then,
 after screening and analyzing the results, the authors created a mapping
 to certain categories and several problems and their solutions.
-After a presentation of the results, a wide discussion of the found
+After a presentation of the results, Waseem et al. provide a broad discussion of the found
 results shows some differences between the theory and effective
 results \cite{waseem:SMSMSADevOps}.
 
@@ -40,7 +40,7 @@ The SMS contained three essential steps \cite{waseem:SMSMSADevOps}:
     \item Mapping and documenting the results
 \end{enumerate}
 
-The authors built the conducted SMS upon the guidelines purposed by Kai Petersen \cite{petersen:SMS}.
+The authors built the conducted SMS upon the guidelines proposed by Kai Petersen \cite{petersen:SMS}.
 
 \subsection{Research Questions}
 
@@ -54,8 +54,8 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
             | X |}
         \hline
         \multicolumn{2}{ | X | }{
-            Category 1: Demography, classification,
-            and mapping of research
+            \textbf{Category 1: Demography, classification,
+            and mapping of research}
         }                                                  \\
         \hline
         RQ1.1
@@ -69,7 +69,7 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
         DevOps and how can they be classified and mapped?  \\
         \hline
         \multicolumn{2}{ | X | }{
-            Category 2: Problems, solutions, and challenges
+            \textbf{Category 2: Problems, solutions, and challenges}
         }                                                  \\
         \hline
         RQ2.1
@@ -88,8 +88,8 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
         implementing MSA in DevOps?                        \\
         \hline
         \multicolumn{2}{ | X | }{
-            Category 3: MSA description methods, patterns,
-            and quality attributes
+            \textbf{Category 3: MSA description methods, patterns,
+            and quality attributes}
         }                                                  \\
         \hline
         RQ3.1
@@ -106,7 +106,7 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
         MSA in DevOps?                                     \\
         \hline
         \multicolumn{2}{ | X | }{
-            Category 4: Tool support and application domains
+            \textbf{Category 4: Tool support and application domains}
         }                                                  \\
         \hline
         RQ4.1
@@ -123,7 +123,7 @@ according to the goal of the paper \cite{waseem:SMSMSADevOps}:
     \label{tbl:RQs}
 \end{table}
 
-The table above (\autoref{tbl:RQs}) shows the research questions that the authors
+\autoref{tbl:RQs} shows the research questions that the authors
 tried to solve with the systematic mapping study.
 
 \subsection{Search}
@@ -155,20 +155,29 @@ The search was executed on the following seven databases \cite{waseem:SMSMSADevO
 
 \begin{itemize}
     \item ACM Digital Library (\url{https://dl.acm.org})
-    \item IEEE Explore (\url{https://ieeexplore.ieee.org})
     \item Springer Link (\url{https://link.springer.com})
-    \item Science Direct (\url{https://www.sciencedirect.com})
     \item Wiley InterScience (\url{https://onlinelibrary.wiley.com})
     \item EI Compendex (\url{https://www.engineeringvillage.com})
+    \item IEEE Xplore (\url{https://ieeexplore.ieee.org})
+    \item Science Direct (\url{https://www.sciencedirect.com})
     \item ISI Web of Science (\url{https://webofknowledge.com})
 \end{itemize}
+
+The search for the first four databases (ACM until EI Compendex) was executed
+on the title of the publication, as well as their abstract. The other three
+databases also included ``keywords'' in the search targets.
 
 The execution of the provided search queries on the given databases
 yielded a total of 494 studies. After the initial search, the authors
 screened and categorized the found studies into relevant and irrelevant
 publications. Of the original 494 studies, only 285 were flagged as ``relevant''.
 \smsAuthors then analyzed the studies according to six generic screening and one specific
-screening aspect. After the screening, 117 remained flagged as relevant.
+screening aspect. An example of such a generic aspect is: ``Is the study written in English?''.
+Whereas the specific one states: ``Does the study present problems, solutions, challenges,
+description methods, patterns, QAs, and tools in the context of
+MSA and DevOps combination?'' \cite{waseem:SMSMSADevOps}.
+
+After the screening, 117 remained flagged as relevant.
 Those 117 studies were fully read and scored by the authors according to inclusion and
 exclusion criteria. At the point when the authors read and assessed all 117 studies,
 only 45 studies remained in the relevant category.
@@ -200,7 +209,7 @@ the specific research questions.
 
 \subsubsection{Demography and Classification}
 
-This subsection shall tackle RQ1.1 and RQ1.2 of \autoref{tbl:RQs}.
+This subsection shall tackle RQ1.1 and RQ1.2 from \autoref{tbl:RQs}.
 
 The conducted search had a year span from 2009 to 2018 \cite{waseem:SMSMSADevOps}.
 Despite the broad search parameters of nearly considering a decade worth
@@ -208,7 +217,7 @@ of publications, all of the relevant publications were published between
 2015 and 2018. The following graph (\autoref{fig:publicationActivity})
 should give some insight into the yearly publication rate and the type of publication:
 
-\begin{figure}[H]
+\begin{figure}[h]
     \begin{tikzpicture}
         \begin{axis}[
                 ybar stacked,
@@ -356,11 +365,11 @@ the problems are not specifically ordered \cite{waseem:SMSMSADevOps}.
 
 For each of the problems in the shown lists, the considered publications
 provide at least one solution which can be viewed in ``Figure 6''
-of the reviewed study. In general, a purposed idea to tackle multiple
+of the reviewed study. In general, a proposed idea to tackle multiple
 of the problems is to try not to decompose microservice applications
 too fine-grain \cite{waseem:SMSMSADevOps}. As for the general problem
 category ``designing MSA based systems'', multiple solutions are provided.
-Many different architectures are promoted and evaluated \cite{waseem:SMSMSADevOps}.
+A variety of architectures are promoted and evaluated \cite{waseem:SMSMSADevOps}.
 
 To implement MSA based systems in a DevOps context, many studies suggest
 automated pipelines as well as automatic testing libraries. For communicating
@@ -377,14 +386,14 @@ right now. Which means ``unit testing'', ``integration testing'',
 The topic of deploying MSA based systems is covered mostly by containerization
 and tools like ``Docker Compose'' and ``Kubernetes'' \cite{waseem:SMSMSADevOps}.
 
-Monitoring is purposed to be addressed with frameworks like
+Monitoring is proposed to be addressed with frameworks like
 ``Unicorn''\footnote{\url{https://www.technative.io/unicorn-framework-the-rise-of-devops-as-a-service/}}
 and patter-based approaches like Omnia\footnote{Elaborated in \cite{miglerina:Omnia}}.
 The general goal should be, that each team that owns the microservice should be enabled
 to monitor their responsibilities \cite{waseem:SMSMSADevOps}.
 
 Problems that relate to culture, people, cost, and other organizational
-topics are purposed to be dealt with guidelines for adopting to
+topics are proposed to be dealt with guidelines for adopting to
 new structures in organizations. Cross-functional teams should be introduced
 and they should receive training to spread the acceptance of the
 new technology \cite{waseem:SMSMSADevOps}.
@@ -450,7 +459,7 @@ The distribution is shown in \autoref{fig:Distribution}.
 \end{figure}
 
 To achieve microservice architecture in complex systems, a multitude of
-patterns are purposed over all studies. The SMS identified 38 different design
+patterns are proposed over all studies. The SMS identified 38 different design
 patterns across all regarded papers. \smsAuthors organized the mentioned
 patterns in the following three categories \cite{waseem:SMSMSADevOps}:
 
@@ -512,7 +521,7 @@ Some studies listed the following QAs as being negatively influenced:
 \end{itemize}
 
 To have a view from positively mentioned against negatively mentioned,
-consider the following chart:
+consider the following chart which is adapted from the data in the study:
 
 \begin{figure}[H]
     \begin{tikzpicture}
@@ -644,7 +653,7 @@ in the study \cite{waseem:SMSMSADevOps}.
 The following sections summarizes the ``Discussion'' of the SMS. The study
 analyzed the found results and explained certain trends.
 
-\subsubsection{Research status and themes}
+\subsubsection{Research Status and Themes}
 
 The limitation of the search to peer-reviewed literature from January 2009 to
 July 2018 is based on the ``creation'' of the terms MSA and DevOps.
@@ -660,7 +669,7 @@ as well. On the other hand, there were no publications found that focus on
 the topic of ``Requirements Engineering'', be it practices or any other
 activities \cite{waseem:SMSMSADevOps}.
 
-\subsubsection{Problems and solutions}
+\subsubsection{Problems and Solutions}
 
 The given solutions in the regarded publications consist of
 design patterns, guidelines, frameworks, etc. For example,
@@ -685,7 +694,7 @@ applications to MSA, most of the time, security concerns arise. MSA based system
 create complex access control scenarios without any matured patterns to harden
 the systems against attackers \cite{waseem:SMSMSADevOps}.
 
-\subsubsection{Description methods and MSA design patterns}
+\subsubsection{Description Methods and MSA Design Patterns}
 
 Most studies use just plain, informal boxes and lines as well as UML to
 describe microservice architectures. Other methods, like formal $\pi$-Calculator
@@ -701,7 +710,7 @@ a monolytic application to a MSA based system.
 A not so well covered topic are patterns and recommendations
 that support CI/CD in MSA \cite{waseem:SMSMSADevOps}.
 
-\subsubsection{Application domains}
+\subsubsection{Application Domains}
 
 The SMS observed, that a third of the studies did not provide a specific application
 domain, nor any information to which domain they may count. The rest of the publications

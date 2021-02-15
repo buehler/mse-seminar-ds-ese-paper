@@ -1,7 +1,7 @@
-\section{Critical review of the paper}
+\section{Critical Review of the Paper}
 \label{sec:review}
 
-The following section is a critical review of the conducted study.
+The following section critically reviews the conducted study.
 The review contains statements about the used empirical engineering methods
 as well as the found results and the followed discussion about the results.
 
@@ -9,8 +9,8 @@ As a general critique, the layout of the study should help
 the reader through the paper smoothly.
 There are many tables and figures which explain the results
 quite efficient and to the point, but the layout of the study forces the
-reader to jump around when going through it. It could have been
-a better approach to move all figures and tables to an appendix
+reader to jump around when going through it. It may improve the readability
+if all figures and tables are moved to an appendix
 and have the text reference them.
 
 \subsection{Definitions}
@@ -26,7 +26,7 @@ of MSA and DevOps.
 
 \subsection{Empirical Research Methods}
 
-The study used the purposed guidelines of peer-reviewed publications
+The study used the proposed guidelines of peer-reviewed publications
 to conduct the SMS. The authors did adjust and combine some of the guidelines
 according to the peculiarities of the topic.
 
@@ -34,7 +34,7 @@ according to the peculiarities of the topic.
 
 The research questions are well structured into categories.
 However, the RQs in categories two to four appear too broad
-in my opinion. Some of the questions should be split up into finer definitions or
+in my opinion. The following questions should be split up into finer definitions or
 should be more specific.
 
 \textbf{RQ2.1} \textit{``What problems have been reported 
@@ -61,7 +61,7 @@ research question about available tooling. Currently, this question
 ranges from planning tools (e.g. Jira) to tools for version control
 (e.g. GitHub).
 
-\subsubsection{Search strategy and Snowballing}
+\subsubsection{Search Strategy and Snowballing}
 
 The search for publications is conducted thoroughly. Many results
 are found which is a good sign for the search itself. It is an excellent
@@ -80,7 +80,7 @@ at all why July 2018 is the upper bound. The reviewed study was published
 in the year 2020, but since the searched publications were limited
 to the year 2018, many new techniques and publications were ignored.
 
-The limitation of the search to only allow peer-reviewed publications
+The limitation to only allow peer-reviewed publications
 to be relevant does filter out some solutions to given problems and
 even challenges. In computer science, one big driving force
 of innovation are companies that need solutions and tools for the
@@ -99,7 +99,7 @@ writing styles and variants were used for the term ``Microservice'', the term ``
 is just plainly searched. There could also be material, that does not
 contain the term in the title at all. Those papers are excluded as well.
 
-\subsubsection{Quality assessment}
+\subsubsection{Quality Assessment}
 
 The given screening criteria are well defined and create
 an exact baseline for the found papers such as the
@@ -112,13 +112,15 @@ problems, and solutions in the found studies. Furthermore, it is
 eminent to know the limitations of the studies. The increased
 weight of the specific criteria versus the generic ones does
 help to search for the targeted publications that are relevant
-for the topic of the SMS.
+for the topic of the SMS. To give an example of such a quality
+assessment criteria, consider the following from Waseem et al.:
+``Does the study focus on MSA in DevOps?''.
 
 \subsection{Results and Discussion}
 
 \smsAuthors extensively describe the derived results and
 the subsequent discussion. Some findings and argumentation
-spark questions however.
+spark questions, however.
 
 \subsubsection{Problems and Solutions}
 
@@ -162,7 +164,7 @@ impact of computation itself in a work unit, but the general impact
 on the overall system when chaining subsequent units together.
 \autoref{fig:deepMSA} shows such a scenario. For the sake of
 simplicity, let us assume that each call in \autoref{fig:deepMSA}
-(i.e. Client to Api, Api to IAM\footnote{\label{fn:IAM}Identity and Access Management},
+(i.e. Client to API, API to IAM\footnote{\label{fn:IAM}Identity and Access Management},
 Service to Service, and Service to Datastore) takes \texttt{100ms}.
 
 The assumed time contains computation, transformation from and to
@@ -198,8 +200,7 @@ in a performance penalty. Systems like ``Google PubSub'' could help
 mitigate this bottleneck and create the possibility to scale
 instances of microservices on the horizontal scale.
 Furthermore, Kubernetes, among other orchestration platforms, provide developers with
-battle-proof tools to scale services with load-balancing features
-such as ``services'' which map to instances of the given services.
+battle-proof tools to scale services with load-balancing features.
 
 The statement about hardware is accurate. Depending on the hardware,
 the performance of the whole MSA based system will vary. For example,
@@ -227,7 +228,7 @@ the central identity server can provide endpoints to fetch roles
 or other means of authorization logic to check if the call is allowed
 in the given microservice with the provided token.
 
-\subsubsection{Quality attributes}
+\subsubsection{Quality Attributes}
 
 The SMS does a good job at showing the positive and negative
 statements of the relevant studies. The comparison and categorization
@@ -237,7 +238,7 @@ MSA and DevOps itself. The most important statement here is the security
 concern. Security is and will be a part of any public application
 and therefore is a central topic.
 
-\subsubsection{Tool support}
+\subsubsection{Tool Support}
 
 The validity of this part of the results is questionable.
 The listed and found tools over all the regarded publications mix
@@ -254,8 +255,7 @@ Filebeat itself does nothing in terms of security, it is a log analyzer.
 
 Furthermore, the vast majority of the listed tools are ``Enterprise Tools''.
 This does not necessarily mean they are not worth a try,
-but they tend to be aged and not created according to the
-newest and latest patterns and practices.
+but they tend to age.
 
 There are many open-source industry driven tools missing. Many
 modern companies use newer and more state-of-the-art tools.

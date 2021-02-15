@@ -11,8 +11,19 @@
 \newcommand{\wsl}{\cite{waseem:SMSMSADevOps}}
 \newcommand{\wsls}{\cite{waseem:SMSMSADevOps} }
 
+\newcommand{\Autoref}[1]{%
+  \begingroup%
+  \def\chapterautorefname{Chapter}%
+  \def\sectionautorefname{Section}%
+  \def\subsectionautorefname{Subsection}%
+  \autoref{#1}%
+  \endgroup%
+}
+
 %%%%%%%%%%-----PDF Plots
 \pgfplotsset{width=\columnwidth,compat=1.9}
 
 %%%%%%%%%%-----Word Hyphenations
 \hyphenation{Dev-Ops}
+\hyphenation{pa-ra-digm}
+\hyphenation{pa-ra-digms}

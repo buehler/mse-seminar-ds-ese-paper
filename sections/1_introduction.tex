@@ -7,29 +7,30 @@ The goal is to introduce the reader to the topic, explain the used
 methods in empirical software engineering and give a critical review
 of the conducted study and the results.
 
-The study used a broad search over several well-known publication-databases
+The study used a broad search over several well-known publication databases
 and searched for research material on the topic of microservice architectures
 in the DevOps context. After the first search additional material
-was searched for with a technique called ``snowballing''. All this material
+was searched by using the cited and referenced material in the found publications. All this material
 was then screened and analyzed and after an initial selection was made,
 the studies were fully read and information extracted. The results
-are then mapped and categorized according to guidelines.
+are then mapped and categorized according to the research questions
+and guidelines stated in the study.
 
 The study shows various problems and their corresponding solutions
-along with some challenges (problems without any purposed solution).
+along with some challenges (problems without any proposed solution).
 Some of the problems do not have a solution because gray literature is
 not allowed in the search.
 
 The remainder of the paper will introduce terms and principles that are used
-in the reviewed study, as well as topics that a reader needs for the understanding
-of the study and this review. Furthermore, this paper creates an objective summary,
+in the reviewed study. In addition, the paper introduces certain topics that a reader needs to understand
+the study and this review. Furthermore, this paper creates an objective summary,
 a critical review and a derived conclusion of the reviewed paper \cite{waseem:SMSMSADevOps}.
 
 \subsection{Design Science}
 
 Design Science has the main purpose of achieving knowledge and a general understanding
 about a domain. Design Science contains several guidelines
-according to Alan R. Hevner (among other authors). Those guidelines are \cite{hevner:DesignScience}:
+according to Alan R. Hevner (among other authors). These guidelines are \cite{hevner:DesignScience}:
 
 \begin{itemize}
     \item \textit{Design as an artifact}: Design Science must produce an artifact
@@ -67,7 +68,7 @@ field. It is a defined process in which the following steps take place \cite{pet
 
 The result of an SMS allows readers and researchers to determine the coverage of the given
 field of interest \cite{petersen:SMS}. In the reviewed paper, the search yielded 47
-publications as ``relevant'' for the SMS.
+publications as ``relevant'' for investigation.
 
 \subsubsection{Systematic Literature Review (SLR)}
 
@@ -86,13 +87,13 @@ SLRs in specific areas.'' \cite{farshchian:SMSvsSLR}.
 
 \subsubsection{Systematic Gray Literature Review (SGLR)}
 
-A SGLR is essentially the same as an SLR with a very important difference:
+In contrast to an SLR, the SGLR differs from an SLR in one essential way:
 It does not only consider published and unpublished \textit{peer reviewed} work,
 but also ``Gray Literature''. Gray literature is evidence and material that
 is not published in commercial and peer reviewed publications \cite{paez:GrayLiterature}.
 In the context of computer science, gray literature can provide important statements
-and evidence towards topics that are more driven by businesses than by the academia.
-Commercial companies drive the innovation around computer science nowadays. 
+and evidence towards topics that are more driven by businesses than by academia.
+Commercial companies drive the innovation around computer science nowadays.
 Those companies need solutions for acute problems and therefore do not wait on papers and evidence
 to be peer-reviewed until they move on.
 
@@ -111,20 +112,20 @@ systems. Microservices adhere to the following tenets \cite{zio:MSATenets}:
 
 \begin{itemize}
     \item \textit{Fine-grained interfaces}: The work unit encapsulates logic
-    around a single topic of work and exposes the interface remotely
+    around a single topic of work and exposes the interface remotely.
     \item \textit{Domain-Drive Design (DDD)}: The services are conceptional
-    created around business-driven development patterns
+    created around business-driven development patterns.
     \item \textit{IDEAL}: \textbf{I}solated State, \textbf{D}istribution,
-    \textbf{E}lasticity, \textbf{A}utomated Management and \textbf{L}oose Coupling
+    \textbf{E}lasticity, \textbf{A}utomated Management and \textbf{L}oose Coupling.
     \item \textit{Polyglot Persistence}: Multiple programming paradigms (e.g.
     object-oriented and functional) and storage paradigms (e.g. NoSQL and relational
-    database systems) are used in a polyglot programming and persistence strategy
+    database systems) are used in a polyglot programming and persistence strategy.
     \item \textit{Lightweight Containers}: The work units are containerized and
-    deployed via corresponding channels (e.g. Docker)
+    deployed via corresponding channels (e.g. Docker).
     \item \textit{Automated Continuous Delivery}: During service development,
-    a high degree of automation is used to deploy the work unit
+    a high degree of automation is used to deploy the work unit.
     \item \textit{Lean Holistic Management (DevOps)}: Largely automated practices
-    are used to tackle configuration, performance, monitoring and fault management
+    are used to tackle configuration, performance, monitoring and fault management.
 \end{itemize}
 
 These tenets define the work units of a microservice architecture. This makes
